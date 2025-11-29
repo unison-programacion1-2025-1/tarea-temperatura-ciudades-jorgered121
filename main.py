@@ -26,9 +26,9 @@ df_celsius["Toronto"] = df_celsius["Toronto"].apply(kelvin_to_celsius)
 # Analisis
 
 # TODO: Imprime que día y hora se registró la temperatura mínima en Phoenix con el siguiente mensaje: "El día con la temperatura mínima en Phoenix fue: {fecha}"
-i_min = df_celsius['San Diego'].idxmin()
-valorMinimo = df_celsius['San Diego'][i_min]
-rint(f"Valor mínimo alcanzado en phoenix fue = {valorMinimo} fue alcanzado el {i_min}")
+min_temp_phoenix = df_celsius['Phoenix'].min().round(2)
+fecha_min_phoenix = df_celsius['Phoenix'].idxmin()
+rint(f"Valor mínimo alcanzado en phoenix fue = {min_temp_phoenix} fue alcanzado el {fecha_min_phoenix}")
 # TODO: Imprime la temperatura mínima en Phoenix con el siguiente mensaje: "La temperatura mínima registrada en Phoenix fue de: ", temperatura, " °C""
 
 # TODO: Imprime que día y hora se registró la temperatura máxima en Phoenix con el siguiente mensaje: "El día con la temperatura máxima en Phoenix fue: {fecha}"
