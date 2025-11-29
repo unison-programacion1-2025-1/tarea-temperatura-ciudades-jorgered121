@@ -38,7 +38,9 @@ print(f"El día con la temperatura máxima en Phoenix fue: {fecha_max_phoenix}")
 # TODO: Imprime la temperatura máxima en Phoenix con el siguiente mensaje: "La temperatura máxima registrada en Phoenix fue de: ", temperatura, " °C""
 print(f"La temperatura máxima registrada en Phoenix fue de: {max_temp_phoenix} °C")
 # TODO: Imprime la temperatura promedio en Phoenix durante el año 2016 con el siguiente mensaje: "La temperatura promedio durante 2016 en Phoenix fue de: ", temperatura, " °C""
-
+df_phoenix_2016 = df_celsius[df_celsius.index.year == 2016]
+promedio_temp_phoenix_2016 = df_phoenix_2016['Phoenix'].mean().round(2)
+print(f"La temperatura promedio durante 2016 en Phoenix fue de: {promedio_temp_phoenix_2016} °C")
 # Graficar la temperatura de Phoenix durante el año 2016
 plt.figure(figsize=(20, 10))
 plt.scatter(df_celsius.index, df_celsius['Phoenix'], label='Phoenix')
